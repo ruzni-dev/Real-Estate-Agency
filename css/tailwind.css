@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Primary Colors - Indigo */
+  --color-primary: #4F46E5; /* indigo-600 */
+  --color-primary-50: #EEF2FF;
+  --color-primary-100: #E0E7FF;
+  --color-primary-200: #C7D2FE;
+  --color-primary-300: #A5B4FC;
+  --color-primary-400: #818CF8;
+  --color-primary-500: #6366F1; /* indigo-500 */
+  --color-primary-600: #4F46E5; /* indigo-600 */
+  --color-primary-700: #4338CA;
+  --color-primary-800: #3730A3;
+  --color-primary-900: #312E81;
+
+  /* Secondary Colors - Purple */
+  --color-secondary: #7E22CE; /* purple-700 */
+  --color-secondary-50: #FAF5FF;
+  --color-secondary-100: #F3E8FF;
+  --color-secondary-200: #E9D5FF;
+  --color-secondary-300: #D8B4FE;
+  --color-secondary-400: #C084FC;
+  --color-secondary-500: #A855F7;
+  --color-secondary-600: #9333EA;
+  --color-secondary-700: #7E22CE; /* Secondary */
+  --color-secondary-800: #6B21A8;
+  --color-secondary-900: #581C87;
+
+  /* Accent Colors - Pink */
+  --color-accent: #EC4899; /* pink-500 */
+  --color-accent-50: #FDF2F8;
+  --color-accent-100: #FCE7F3;
+  --color-accent-200: #FBCFE8;
+  --color-accent-300: #F9A8D4;
+  --color-accent-400: #F472B6;
+  --color-accent-500: #EC4899; /* Accent */
+  --color-accent-600: #DB2777;
+  --color-accent-700: #BE185D;
+  --color-accent-800: #9D174D;
+  --color-accent-900: #831843;
+
+  /* Background Colors */
+  --color-background: #ffffff; /* Pure white for premium clarity and content focus */
+  --color-surface: #F8FAFC; /* Subtle slate-50 for card backgrounds and gentle separation */
+
+  /* Text Colors */
+  --color-text-primary: #1E293B; /* slate-800 for optimal reading contrast */
+  --color-text-secondary: #475569; /* slate-600 for supporting information hierarchy */
+
+  /* Status Colors */
+  --color-success: #10B981; /* emerald-500 */
+  --color-success-50: #ECFDF5;
+  --color-success-100: #D1FAE5;
+  --color-success-200: #A7F3D0;
+  --color-success-300: #6EE7B7;
+  --color-success-400: #34D399;
+  --color-success-500: #10B981; /* Success */
+  --color-success-600: #059669;
+  --color-success-700: #047857;
+  --color-success-800: #065F46;
+  --color-success-900: #064E3B;
+
+  --color-warning: #F59E0B; /* amber-500 */
+  --color-warning-50: #FFFBEB;
+  --color-warning-100: #FEF3C7;
+  --color-warning-200: #FDE68A;
+  --color-warning-300: #FCD34D;
+  --color-warning-400: #FBBF24;
+  --color-warning-500: #F59E0B; /* Warning */
+  --color-warning-600: #D97706;
+  --color-warning-700: #B45309;
+  --color-warning-800: #92400E;
+  --color-warning-900: #78350F;
+
+  --color-error: #EF4444; /* red-500 */
+  --color-error-50: #FEF2F2;
+  --color-error-100: #FEE2E2;
+  --color-error-200: #FECACA;
+  --color-error-300: #FCA5A5;
+  --color-error-400: #F87171;
+  --color-error-500: #EF4444; /* Error */
+  --color-error-600: #DC2626;
+  --color-error-700: #B91C1C;
+  --color-error-800: #991B1B;
+  --color-error-900: #7F1D1D;
+
+  /* Border Colors */
+  --color-border: #E2E8F0; /* slate-200 for borders */
+  --color-border-light: #F1F5F9; /* slate-100 */
+  --color-border-dark: #CBD5E1; /* slate-300 */
+}
+
+/* Custom Shadows */
+.shadow-soft {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.shadow-floating {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.shadow-glass {
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+/* Custom Transitions */
+.transition-smooth {
+  transition: all 300ms ease-out;
+}
+
+.transition-micro {
+  transition: all 200ms ease-out;
+}
+
+/* Typography Utilities */
+.font-display {
+  font-family: 'Playfair Display', serif;
+}
+
+.font-body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Glass Morphism */
+.glass-effect {
+  @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-glass;
+}
+
+/* Gradient Backgrounds */
+.bg-gradient-purple-blue {
+  @apply bg-gradient-to-r from-primary-600 to-secondary-700;
+}
+
+.bg-gradient-indigo-violet {
+  @apply bg-gradient-to-r from-indigo-500 to-purple-600;
+}
+
+.bg-gradient-premium {
+  @apply bg-gradient-diagonal from-primary-100 via-secondary-50 to-primary-50;
+}
+
+/* Custom Components */
+.btn-primary {
+  @apply bg-primary text-white font-semibold py-3 px-6 rounded-md transition-micro hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-400 focus:ring-offset-2 shadow-soft hover:shadow-floating;
+}
+
+.btn-secondary {
+  @apply bg-secondary text-white font-semibold py-3 px-6 rounded-md transition-micro hover:bg-secondary-800 focus:outline-none focus:ring-2 focus:ring-secondary-400 focus:ring-offset-2 shadow-soft hover:shadow-floating;
+}
+
+.btn-accent {
+  @apply bg-accent text-white font-semibold py-3 px-6 rounded-md transition-micro hover:bg-accent-600 focus:outline-none focus:ring-2 focus:ring-accent-400 focus:ring-offset-2 shadow-soft hover:shadow-floating;
+}
+
+.btn-glass {
+  @apply glass-effect text-primary-700 font-semibold py-3 px-6 rounded-md transition-micro hover:bg-white/90 focus:outline-none focus:ring-2 focus:ring-primary-400 focus:ring-offset-2;
+}
+
+.card {
+  @apply bg-white rounded-xl shadow-soft border border-gray-200 p-6 transition-smooth hover:shadow-floating;
+}
+
+.card-glass {
+  @apply glass-effect rounded-xl p-6 transition-smooth;
+}
+
+.input-field {
+  @apply w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-400 focus:border-transparent transition-micro;
+}
+
+/* Animations */
+.animate-pulse-soft {
+  animation: pulseSoft 3s infinite;
+}
+
+@keyframes pulseSoft {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
