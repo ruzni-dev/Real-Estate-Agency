@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Property Listings - Advanced Search Results | Estate Elite</title>
+    <meta name="description" content="Discover premium properties with Estate Elite's intelligent search. Advanced filtering, market analytics, and lifestyle matching for discerning buyers." />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+</head>
+<body class="font-body bg-surface">
+    <!-- Navigation Header -->
+    <nav class="bg-white shadow-soft sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="home.html" class="flex items-center">
+                        <svg class="h-8 w-8 text-primary" viewBox="0 0 32 32" fill="currentColor">
+                            <path d="M16 2L4 12v18h6v-8h12v8h6V12L16 2zm0 4l8 6v14h-2v-8H10v8H8V12l8-6z"/>
+                        </svg>
+                        <span class="ml-2 text-xl font-display font-semibold text-primary">Estate Elite</span>
+                    </a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="home.html" class="text-text-secondary hover:text-primary transition-micro">Home</a>
+                        <a href="property-listings.html" class="text-primary font-medium border-b-2 border-primary pb-1">Properties</a>
+                        <a href="agent-directory.html" class="text-text-secondary hover:text-primary transition-micro">Agents</a>
+                        <a href="neighborhood.html" class="text-text-secondary hover:text-primary transition-micro">Neighborhoods</a>
+                        <a href="market-reports.html" class="text-text-secondary hover:text-primary transition-micro">Market Reports</a>
+                        <a href="about.html" class="text-text-secondary hover:text-primary transition-micro">About</a>
+                        <a href="contact.html" class="btn-primary">Contact</a>
+                    </div>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button type="button" class="text-text-secondary hover:text-primary focus:outline-none focus:text-primary">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Search Header -->
+    <section class="bg-white border-b border-gray-200 py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between space-y-4 lg:space-y-0">
+                <!-- Search Bar -->
+                <div class="flex-1 max-w-2xl">
+                    <div class="relative">
+                        <input type="text" placeholder="Search by location, property type, or lifestyle preference..." value="Luxury condos near Central Park" class="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-base" />
+                        <svg class="absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                        </svg>
+                    </div>
+                </div>
+                
+                <!-- View Controls -->
+                <div class="flex items-center space-x-4">
+                    <div class="flex bg-gray-100 rounded-lg p-1">
+                        <button class="px-3 py-2 bg-primary text-white rounded-md text-sm font-medium transition-micro">
+                            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+                            </svg>
+                        </button>
+                        <button class="px-3 py-2 text-text-secondary hover:text-primary rounded-md text-sm font-medium transition-micro">
+                            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
+                            </svg>
+                        </button>
+                        <button class="px-3 py-2 text-text-secondary hover:text-primary rounded-md text-sm font-medium transition-micro">
+                            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                            </svg>
+                        </button>
+                    </div>
+                    
+                    <!-- Sort Dropdown -->
+                    <select class="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-sm">
+                        <option>Price: High to Low</option>
+                        <option>Price: Low to High</option>
+                        <option>Newest First</option>
+                        <option>Days on Market</option>
+                        <option>Investment Score</option>
+                        <option>Lifestyle Match</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Sidebar Filters -->
+            <aside class="lg:w-80 space-y-6">
+                <!-- Quick Filters -->
+                <div class="card">
+                    <h3 class="font-semibold text-text-primary mb-4">Quick Filters</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <button class="px-3 py-1 bg-primary text-white text-sm rounded-full">Luxury</button>
+                        <button class="px-3 py-1 bg-gray-100 text-text-secondary text-sm rounded-full hover:bg-primary-50 transition-micro">Investment</button>
+                        <button class="px-3 py-1 bg-gray-100 text-text-secondary text-sm rounded-full hover:bg-primary-50 transition-micro">Family Homes</button>
+                        <button class="px-3 py-1 bg-gray-100 text-text-secondary text-sm rounded-full hover:bg-primary-50 transition-micro">New Construction</button>
+                        <button class="px-3 py-1 bg-gray-100 text-text-secondary text-sm rounded-full hover:bg-primary-50 transition-micro">Waterfront</button>
+                    </div>
+                </div>
+
+                <!-- Price Range -->
+                <div class="card">
+                    <h3 class="font-semibold text-text-primary mb-4">Price Range</h3>
+                    <div class="space-y-4">
+                        <div class="flex flex-col sm:flex-row sm:space-x-4 space-y-2 sm:space-y-0">
+                            <input type="text" placeholder="Min Price" class="w-full sm:w-1/2 px-3 py-2 border border-gray-300 rounded-md text-sm" />
+                            <input type="text" placeholder="Max Price" class="w-full sm:w-1/2 px-3 py-2 border border-gray-300 rounded-md text-sm" />
+                        </div>
+                        <div class="relative">
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-primary h-2 rounded-full" style="width: 60%; margin-left: 20%"></div>
+                            </div>
+                            <div class="flex justify-between text-xs text-text-secondary mt-1">
+                                <span>$500K</span>
+                                <span>$5M+</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Property Type -->
+                <div class="card">
+                    <h3 class="font-semibold text-text-primary mb-4">Property Type</h3>
+                    <div class="space-y-3">
+                        <label class="flex items-center">
+                            <input type="checkbox" checked class="rounded border-gray-300 text-primary focus:ring-primary" />
+                            <span class="ml-2 text-sm text-text-secondary">Condos & Co-ops</span>
+                            <span class="ml-auto text-xs text-text-secondary">(47)</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" class="rounded border-gray-300 text-primary focus:ring-primary" />
+                            <span class="ml-2 text-sm text-text-secondary">Single Family</span>
+                            <span class="ml-auto text-xs text-text-secondary">(23)</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" class="rounded border-gray-300 text-primary focus:ring-primary" />
+                            <span class="ml-2 text-sm text-text-secondary">Townhouses</span>
+                            <span class="ml-auto text-xs text-text-secondary">(12)</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" class="rounded border-gray-300 text-primary focus:ring-primary" />
+                            <span class="ml-2 text-sm text-text-secondary">Multi-Family</span>
+                            <span class="ml-auto text-xs text-text-secondary">(8)</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Smart Filters -->
+                <div class="card">
+                    <h3 class="font-semibold text-text-primary mb-4">Smart Analytics</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-text-secondary mb-2">Investment Potential Score</label>
+                            <div class="flex items-center space-x-2">
+                                <span class="text-xs text-text-secondary">Low</span>
+                                <div class="flex-1 bg-gray-200 rounded-full h-2">
+                                    <div class="bg-success h-2 rounded-full" style="width: 75%"></div>
+                                </div>
+                                <span class="text-xs text-text-secondary">High</span>
+                            </div>
+                            <div class="text-xs text-success mt-1">7.5+ Score</div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-text-secondary mb-2">Lifestyle Match Rating</label>
+                            <div class="flex items-center space-x-2">
+                                <span class="text-xs text-text-secondary">Poor</span>
+                                <div class="flex-1 bg-gray-200 rounded-full h-2">
+                                    <div class="bg-accent h-2 rounded-full" style="width: 85%"></div>
+                                </div>
+                                <span class="text-xs text-text-secondary">Perfect</span>
+                            </div>
+                            <div class="text-xs text-accent mt-1">8.5+ Match</div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-text-secondary mb-2">Market Momentum</label>
+                            <div class="flex items-center space-x-2">
+                                <span class="text-xs text-text-secondary">Slow</span>
+                                <div class="flex-1 bg-gray-200 rounded-full h-2">
+                                    <div class="bg-primary h-2 rounded-full" style="width: 65%"></div>
+                                </div>
+                                <span class="text-xs text-text-secondary">Hot</span>
+                            </div>
+                            <div class="text-xs text-primary mt-1">Strong Growth</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Amenities -->
+                <div class="card">
+                    <h3 class="font-semibold text-text-primary mb-4">Amenities</h3>
+                    <div class="grid grid-cols-2 gap-3">
+                        <label class="flex items-center">
+                            <input type="checkbox" class="rounded border-gray-300 text-primary focus:ring-primary" />
+                            <span class="ml-2 text-xs text-text-secondary">Doorman</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" class="rounded border-gray-300 text-primary focus:ring-primary" />
+                            <span class="ml-2 text-xs text-text-secondary">Gym</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" class="rounded border-gray-300 text-primary focus:ring-primary" />
+                            <span class="ml-2 text-xs text-text-secondary">Pool</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" class="rounded border-gray-300 text-primary focus:ring-primary" />
+                            <span class="ml-2 text-xs text-text-secondary">Parking</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" class="rounded border-gray-300 text-primary focus:ring-primary" />
+                            <span class="ml-2 text-xs text-text-secondary">Balcony</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" class="rounded border-gray-300 text-primary focus:ring-primary" />
+                            <span class="ml-2 text-xs text-text-secondary">Laundry</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Reset Filters -->
+                <button class="w-full btn-secondary text-sm py-2">Reset All Filters</button>
+            </aside>
+
+            <!-- Property Listings -->
+            <main class="flex-1">
+                <!-- Results Header -->
+                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6">
+                    <div>
+                        <h1 class="text-2xl font-display font-semibold text-text-primary">Premium Properties</h1>
+                        <p class="text-text-secondary mt-1">47 properties match your criteria</p>
+                    </div>
+                    <div class="flex items-center space-x-4 mt-4 sm:mt-0">
+                        <button class="flex items-center space-x-2 text-sm text-text-secondary hover:text-primary transition-micro">
+                            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                            </svg>
+                            <span>Save Search</span>
+                        </button>
+                        <button class="flex items-center space-x-2 text-sm text-text-secondary hover:text-primary transition-micro">
+                            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-5 5v-5zM4 17h5l-5 5v-5zM4 7h5L4 2v5zM15 7h5l-5-5v5z"/>
+                            </svg>
+                            <span>Compare</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Property Cards -->
+                <div class="space-y-6">
+                    <!-- Property 1 -->
+                    <div class="card group cursor-pointer hover:shadow-premium transition-smooth">
+                        <div class="flex flex-col lg:flex-row gap-6">
+                            <!-- Property Image -->
+                            <div class="lg:w-80 relative">
+                                <div class="aspect-w-4 aspect-h-3 rounded-lg overflow-hidden">
+                                    <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Luxury Manhattan penthouse with city views" class="w-full h-64 object-cover group-hover:scale-105 transition-smooth" loading="lazy" onerror="this.src='assets/images/pexels-photo-106399-07f5963a.jpeg'; this.onerror=null;" />
+                                </div>
+                                <!-- Property Badges -->
+                                <div class="absolute top-3 left-3 flex flex-col space-y-2">
+                                    <span class="px-2 py-1 bg-accent text-white text-xs font-medium rounded">Featured</span>
+                                    <span class="px-2 py-1 bg-success text-white text-xs font-medium rounded">New</span>
+                                </div>
+                                <!-- Heart Icon -->
+                                <button class="absolute top-3 right-3 w-8 h-8 bg-white/90 rounded-full flex items-center justify-center hover:bg-white transition-micro">
+                                    <svg class="w-4 h-4 text-text-secondary hover:text-error" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                                    </svg>
+                                </button>
+                                <!-- Image Counter -->
+                                <div class="absolute bottom-3 right-3 px-2 py-1 bg-black/70 text-white text-xs rounded">
+                                    1 / 24
+                                </div>
+                            </div>
+                            
+                            <!-- Property Details -->
+                            <div class="flex-1 space-y-4">
+                                <div class="flex justify-between items-start">
+                                    <div>
+                                        <h3 class="text-xl font-semibold text-text-primary group-hover:text-primary transition-micro">
+                                            <a href="individual-property.html">Luxury Manhattan Penthouse</a>
+                                        </h3>
+                                        <p class="text-text-secondary">123 Park Avenue, Upper East Side, NY 10021</p>
+                                    </div>
+                                    <div class="text-right">
+                                        <p class="text-2xl font-bold text-text-primary">$3,250,000</p>
+                                        <p class="text-sm text-text-secondary">$1,625/sq ft</p>
+                                    </div>
+                                </div>
+                                
+                                <!-- Property Stats -->
+                                <div class="flex items-center space-x-6 text-sm text-text-secondary">
+                                    <div class="flex items-center space-x-1">
+                                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z"/>
+                                        </svg>
+                                        <span>3 Beds</span>
+                                    </div>
+                                    <div class="flex items-center space-x-1">
+                                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"/>
+                                        </svg>
+                                        <span>2.5 Baths</span>
+                                    </div>
+                                    <div class="flex items-center space-x-1">
+                                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/>
+                                        </svg>
+                                        <span>2,000 sq ft</span>
+                                    </div>
+                                    <div class="flex items-center space-x-1">
+                                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                        </svg>
+                                        <span>12 days on market</span>
+                                    </div>
+                                </div>
+                                
+                                <!-- Smart Analytics -->
+                                <div class="grid grid-cols-3 gap-4">
+                                    <div class="text-center p-3 bg-success-50 rounded-lg">
+                                        <div class="text-lg font-bold text-success">8.9</div>
+                                        <div class="text-xs text-text-secondary">Investment Score</div>
+                                    </div>
+                                    <div class="text-center p-3 bg-accent-50 rounded-lg">
+                                        <div class="text-lg font-bold text-accent">9.2</div>
+                                        <div class="text-xs text-text-secondary">Lifestyle Match</div>
+                                    </div>
+                                    <div class="text-center p-3 bg-primary-50 rounded-lg">
+                                        <div class="text-lg font-bold text-primary">Hot</div>
+                                        <div class="text-xs text-text-secondary">Market Trend</div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Property Description -->
+                                <p class="text-sm text-text-secondary leading-relaxed">
+                                    Stunning penthouse with panoramic city views, featuring floor-to-ceiling windows, private terrace, and premium finishes throughout. Located in prestigious building with full amenities.
+                                </p>
+                                
+                                <!-- Action Buttons -->
+                                <div class="flex items-center justify-between pt-4 border-t border-gray-200">
+                                    <div class="flex items-center space-x-4">
+                                        <button class="flex items-center space-x-2 text-sm text-primary hover:text-primary-700 transition-micro">
+                                            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                                            </svg>
+                                            <span>Call Agent</span>
+                                        </button>
+                                        <button class="flex items-center space-x-2 text-sm text-primary hover:text-primary-700 transition-micro">
+                                            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                                            </svg>
+                                            <span>Schedule Tour</span>
+                                        </button>
+                                    </div>
+                                    <div class="flex items-center space-x-2">
+                                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Agent Sarah Chen" class="w-8 h-8 rounded-full object-cover" loading="lazy" onerror="this.src='assets/images/pexels-photo-2379004-2d1b3280.jpeg'; this.onerror=null;" />
+                                        <div class="text-xs">
+                                            <div class="font-medium text-text-primary">Sarah Chen</div>
+                                            <div class="text-text-secondary">Luxury Specialist</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Property 2 -->
+                    <div class="card group cursor-pointer hover:shadow-premium transition-smooth">
+                        <div class="flex flex-col lg:flex-row gap-6">
+                            <!-- Property Image -->
+                            <div class="lg:w-80 relative">
+                                <div class="aspect-w-4 aspect-h-3 rounded-lg overflow-hidden">
+                                    <img src="assets/images/pexels-photo-1396122-af4efd04.jpeg" alt="Modern Brooklyn townhouse with garden" class="w-full h-64 object-cover group-hover:scale-105 transition-smooth" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3'; this.onerror=null;" />
+                                </div>
+                                <!-- Property Badges -->
+                                <div class="absolute top-3 left-3 flex flex-col space-y-2">
+                                    <span class="px-2 py-1 bg-primary text-white text-xs font-medium rounded">Investment</span>
+                                </div>
+                                <!-- Heart Icon -->
+                                <button class="absolute top-3 right-3 w-8 h-8 bg-white/90 rounded-full flex items-center justify-center hover:bg-white transition-micro">
+                                    <svg class="w-4 h-4 text-error" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                                    </svg>
+                                </button>
+                                <!-- Image Counter -->
+                                <div class="absolute bottom-3 right-3 px-2 py-1 bg-black/70 text-white text-xs rounded">
+                                    1 / 18
+                                </div>
+                            </div>
+                            
+                            <!-- Property Details -->
+                            <div class="flex-1 space-y-4">
+                                <div class="flex justify-between items-start">
+                                    <div>
+                                        <h3 class="text-xl font-semibold text-text-primary group-hover:text-primary transition-micro">
+                                            <a href="individual-property.html">Modern Brooklyn Townhouse</a>
+                                        </h3>
+                                        <p class="text-text-secondary">456 Carroll Gardens, Brooklyn, NY 11231</p>
+                                    </div>
+                                    <div class="text-right">
+                                        <p class="text-2xl font-bold text-text-primary">$1,850,000</p>
+                                        <p class="text-sm text-text-secondary">$925/sq ft</p>
+                                    </div>
+                                </div>
+                                
+                                <!-- Property Stats -->
+                                <div class="flex items-center space-x-6 text-sm text-text-secondary">
+                                    <div class="flex items-center space-x-1">
+                                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z"/>
+                                        </svg>
+                                        <span>4 Beds</span>
+                                    </div>
+                                    <div class="flex items-center space-x-1">
+                                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"/>
+                                        </svg>
+                                        <span>3 Baths</span>
+                                    </div>
+                                    <div class="flex items-center space-x-1">
+                                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/>
+                                        </svg>
+                                        <span>2,000 sq ft</span>
+                                    </div>
+                                    <div class="flex items-center space-x-1">
+                                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                        </svg>
+                                        <span>28 days on market</span>
+                                    </div>
+                                </div>
+                                
+                                <!-- Smart Analytics -->
+                                <div class="grid grid-cols-3 gap-4">
+                                    <div class="text-center p-3 bg-success-50 rounded-lg">
+                                        <div class="text-lg font-bold text-success">9.1</div>
+                                        <div class="text-xs text-text-secondary">Investment Score</div>
+                                    </div>
+                                    <div class="text-center p-3 bg-accent-50 rounded-lg">
+                                        <div class="text-lg font-bold text-accent">8.7</div>
+                                        <div class="text-xs text-text-secondary">Lifestyle Match</div>
+                                    </div>
+                                    <div class="text-center p-3 bg-primary-50 rounded-lg">
+                                        <div class="text-lg font-bold text-primary">Rising</div>
+                                        <div class="text-xs text-text-secondary">Market Trend</div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Property Description -->
+                                <p class="text-sm text-text-secondary leading-relaxed">
+                                    Beautifully renovated townhouse with private garden, modern kitchen, and original architectural details. Perfect for families seeking space and character in trendy neighborhood.
+                                </p>
+                                
+                                <!-- Action Buttons -->
+                                <div class="flex items-center justify-between pt-4 border-t border-gray-200">
+                                    <div class="flex items-center space-x-4">
+                                        <button class="flex items-center space-x-2 text-sm text-primary hover:text-primary-700 transition-micro">
+                                            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                                            </svg>
+                                            <span>Call Agent</span>
+                                        </button>
+                                        <button class="flex items-center space-x-2 text-sm text-primary hover:text-primary-700 transition-micro">
+                                            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                                            </svg>
+                                            <span>Schedule Tour</span>
+                                        </button>
+                                    </div>
+                                    <div class="flex items-center space-x-2">
+                                        <img src="assets/images/pexels-photo-1222271-872ca02d.jpeg" alt="Agent Michael Rodriguez" class="w-8 h-8 rounded-full object-cover" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3'; this.onerror=null;" />
+                                        <div class="text-xs">
+                                            <div class="font-medium text-text-primary">Michael Rodriguez</div>
+                                            <div class="text-text-secondary">Investment Expert</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Property 3 -->
+                    <div class="card group cursor-pointer hover:shadow-premium transition-smooth">
+                        <div class="flex flex-col lg:flex-row gap-6">
+                            <!-- Property Image -->
+                            <div class="lg:w-80 relative">
+                                <div class="aspect-w-4 aspect-h-3 rounded-lg overflow-hidden">
+                                    <img src="assets/images/house-1836070_1280.jpg" alt="Elegant family home with spacious yard" class="w-full h-64 object-cover group-hover:scale-105 transition-smooth" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1570129477492-45c003edd2be?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3'; this.onerror=null;" />
+                                </div>
+                                <!-- Property Badges -->
+                                <div class="absolute top-3 left-3 flex flex-col space-y-2">
+                                    <span class="px-2 py-1 bg-warning text-white text-xs font-medium rounded">Price Drop</span>
+                                </div>
+                                <!-- Heart Icon -->
+                                <button class="absolute top-3 right-3 w-8 h-8 bg-white/90 rounded-full flex items-center justify-center hover:bg-white transition-micro">
+                                    <svg class="w-4 h-4 text-text-secondary hover:text-error" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                                    </svg>
+                                </button>
+                                <!-- Image Counter -->
+                                <div class="absolute bottom-3 right-3 px-2 py-1 bg-black/70 text-white text-xs rounded">
+                                    1 / 32
+                                </div>
+                            </div>
+                            
+                            <!-- Property Details -->
+                            <div class="flex-1 space-y-4">
+                                <div class="flex justify-between items-start">
+                                    <div>
+                                        <h3 class="text-xl font-semibold text-text-primary group-hover:text-primary transition-micro">
+                                            <a href="individual-property.html">Elegant Family Estate</a>
+                                        </h3>
+                                        <p class="text-text-secondary">789 Westchester Avenue, Scarsdale, NY 10583</p>
+                                    </div>
+                                    <div class="text-right">
+                                        <p class="text-2xl font-bold text-text-primary">$2,750,000</p>
+                                        <p class="text-sm text-warning line-through">$2,950,000</p>
+                                        <p class="text-sm text-text-secondary">$687/sq ft</p>
+                                    </div>
+                                </div>
+                                
+                                <!-- Property Stats -->
+                                <div class="flex items-center space-x-6 text-sm text-text-secondary">
+                                    <div class="flex items-center space-x-1">
+                                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z"/>
+                                        </svg>
+                                        <span>5 Beds</span>
+                                    </div>
+                                    <div class="flex items-center space-x-1">
+                                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"/>
+                                        </svg>
+                                        <span>4 Baths</span>
+                                    </div>
+                                    <div class="flex items-center space-x-1">
+                                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/>
+                                        </svg>
+                                        <span>4,000 sq ft</span>
+                                    </div>
+                                    <div class="flex items-center space-x-1">
+                                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                        </svg>
+                                        <span>45 days on market</span>
+                                    </div>
+                                </div>
+                                
+                                <!-- Smart Analytics -->
+                                <div class="grid grid-cols-3 gap-4">
+                                    <div class="text-center p-3 bg-success-50 rounded-lg">
+                                        <div class="text-lg font-bold text-success">8.3</div>
+                                        <div class="text-xs text-text-secondary">Investment Score</div>
+                                    </div>
+                                    <div class="text-center p-3 bg-accent-50 rounded-lg">
+                                        <div class="text-lg font-bold text-accent">9.5</div>
+                                        <div class="text-xs text-text-secondary">Lifestyle Match</div>
+                                    </div>
+                                    <div class="text-center p-3 bg-warning-50 rounded-lg">
+                                        <div class="text-lg font-bold text-warning">Stable</div>
+                                        <div class="text-xs text-text-secondary">Market Trend</div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Property Description -->
+                                <p class="text-sm text-text-secondary leading-relaxed">
+                                    Magnificent colonial estate on 2 acres with pool, tennis court, and mature landscaping. Recently renovated with luxury finishes while preserving classic charm. Top-rated school district.
+                                </p>
+                                
+                                <!-- Action Buttons -->
+                                <div class="flex items-center justify-between pt-4 border-t border-gray-200">
+                                    <div class="flex items-center space-x-4">
+                                        <button class="flex items-center space-x-2 text-sm text-primary hover:text-primary-700 transition-micro">
+                                            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                                            </svg>
+                                            <span>Call Agent</span>
+                                        </button>
+                                        <button class="flex items-center space-x-2 text-sm text-primary hover:text-primary-700 transition-micro">
+                                            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                                            </svg>
+                                            <span>Schedule Tour</span>
+                                        </button>
+                                    </div>
+                                    <div class="flex items-center space-x-2">
+                                        <img src="assets/images/beanie-2562646_1280.jpg" alt="Agent Emily Johnson" class="w-8 h-8 rounded-full object-cover" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1494790108755-2616b612b786?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3'; this.onerror=null;" />
+                                        <div class="text-xs">
+                                            <div class="font-medium text-text-primary">Emily Johnson</div>
+                                            <div class="text-text-secondary">Family Homes Specialist</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Load More -->
+                <div class="text-center mt-12">
+                    <button class="btn-primary">Load More Properties</button>
+                    <p class="text-sm text-text-secondary mt-2">Showing 3 of 47 properties</p>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- AI Recommendations -->
+    <section class="py-16 bg-white border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-display font-semibold text-text-primary mb-4">AI-Powered Recommendations</h2>
+                <p class="text-lg text-text-secondary max-w-2xl mx-auto">Based on your search behavior and preferences, we've found properties that might interest you.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Recommendation 1 -->
+                <div class="card group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-lg mb-4">
+                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Similar property recommendation" class="w-full h-48 object-cover group-hover:scale-105 transition-smooth" loading="lazy" onerror="this.src='assets/images/pexels-photo-280222-cb4bc8ac.jpeg'; this.onerror=null;" />
+                        <div class="absolute top-3 left-3">
+                            <span class="px-2 py-1 bg-accent text-white text-xs font-medium rounded">95% Match</span>
+                        </div>
+                    </div>
+                    <h3 class="font-semibold text-text-primary mb-2">Chelsea Luxury Condo</h3>
+                    <p class="text-text-secondary text-sm mb-3">Similar to your saved properties</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-lg font-bold text-text-primary">$2,850,000</span>
+                        <button class="text-primary hover:text-primary-700 text-sm font-medium transition-micro">View Details</button>
+                    </div>
+                </div>
+                
+                <!-- Recommendation 2 -->
+                <div class="card group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-lg mb-4">
+                        <img src="assets/images/pexels-photo-1396122-af4efd04.jpeg" alt="Investment opportunity recommendation" class="w-full h-48 object-cover group-hover:scale-105 transition-smooth" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3'; this.onerror=null;" />
+                        <div class="absolute top-3 left-3">
+                            <span class="px-2 py-1 bg-success text-white text-xs font-medium rounded">High ROI</span>
+                        </div>
+                    </div>
+                    <h3 class="font-semibold text-text-primary mb-2">Investment Opportunity</h3>
+                    <p class="text-text-secondary text-sm mb-3">Strong rental potential in your area</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-lg font-bold text-text-primary">$1,650,000</span>
+                        <button class="text-primary hover:text-primary-700 text-sm font-medium transition-micro">View Details</button>
+                    </div>
+                </div>
+                
+                <!-- Recommendation 3 -->
+                <div class="card group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-lg mb-4">
+                        <img src="assets/images/house-1836070_1280.jpg" alt="Lifestyle match recommendation" class="w-full h-48 object-cover group-hover:scale-105 transition-smooth" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1570129477492-45c003edd2be?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3'; this.onerror=null;" />
+                        <div class="absolute top-3 left-3">
+                            <span class="px-2 py-1 bg-primary text-white text-xs font-medium rounded">Perfect Fit</span>
+                        </div>
+                    </div>
+                    <h3 class="font-semibold text-text-primary mb-2">Family Dream Home</h3>
+                    <p class="text-text-secondary text-sm mb-3">Matches your lifestyle preferences</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-lg font-bold text-text-primary">$2,200,000</span>
+                        <button class="text-primary hover:text-primary-700 text-sm font-medium transition-micro">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-primary-600 to-secondary-700 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="space-y-4">
+                    <div class="flex items-center">
+                        <svg class="h-8 w-8 text-accent" viewBox="0 0 32 32" fill="currentColor">
+                            <path d="M16 2L4 12v18h6v-8h12v8h6V12L16 2zm0 4l8 6v14h-2v-8H10v8H8V12l8-6z"/>
+                        </svg>
+                        <span class="ml-2 text-xl font-display font-semibold">Estate Elite</span>
+                    </div>
+                    <p class="text-primary-100 text-sm leading-relaxed">
+                        Your trusted guide through life's biggest investment. Where market expertise meets lifestyle aspiration.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-primary-200 hover:text-accent transition-micro">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-primary-200 hover:text-accent transition-micro">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-primary-200 hover:text-accent transition-micro">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="font-semibold text-white mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="property-listings.html" class="text-primary-200 hover:text-accent transition-micro">Search Properties</a></li>
+                        <li><a href="agent-directory.html" class="text-primary-200 hover:text-accent transition-micro">Find an Agent</a></li>
+                        <li><a href="neighborhood.html" class="text-primary-200 hover:text-accent transition-micro">Neighborhood Guides</a></li>
+                        <li><a href="market-reports.html" class="text-primary-200 hover:text-accent transition-micro">Market Reports</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Services -->
+                <div>
+                    <h3 class="font-semibold text-white mb-4">Services</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-primary-200 hover:text-accent transition-micro">Buy a Home</a></li>
+                        <li><a href="#" class="text-primary-200 hover:text-accent transition-micro">Sell Your Home</a></li>
+                        <li><a href="#" class="text-primary-200 hover:text-accent transition-micro">Investment Properties</a></li>
+                        <li><a href="#" class="text-primary-200 hover:text-accent transition-micro">Market Analysis</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact -->
+                <div>
+                    <h3 class="font-semibold text-white mb-4">Contact</h3>
+                    <ul class="space-y-2 text-sm text-primary-200">
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                            </svg>
+                            (555) 123-4567
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>
+                            info@estateelit.com
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-4 h-4 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            </svg>
+                            123 Luxury Ave<br />New York, NY 10001
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-primary-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-primary-200 text-sm">© 2025 Estate Elite. All Rights Reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-primary-200 hover:text-accent text-sm transition-micro">Privacy Policy</a>
+                    <a href="#" class="text-primary-200 hover:text-accent text-sm transition-micro">Terms of Service</a>
+                    <a href="#" class="text-primary-200 hover:text-accent text-sm transition-micro">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
