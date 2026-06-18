@@ -262,44 +262,12 @@ $(function() {
             const $icon = $button.find('svg').first();
             
             $button.on('click', function() {
-                const isOpen = $answer.is(':visible');
-
-                // Close every FAQ item except the one being clicked
-                $faqCards.each(function() {
-                    const $otherCard = $(this);
-                    const $otherAnswer = $otherCard.find('.faq-answer').first();
-                    const $otherButton = $otherCard.find('button').first();
-                    const $otherIcon = $otherButton.find('svg').first();
-
-                    if ($otherCard.is($card) || !$otherAnswer.length || !$otherButton.length) {
-                        return;
-                    }
-
-                    if ($otherAnswer.is(':visible')) {
-                        $otherAnswer.slideUp(300);
-                        $otherButton.removeClass('text-primary');
-                        $otherButton.attr('aria-expanded', 'false');
-                        if ($otherIcon.length) {
-                            $otherIcon.removeClass('transform rotate-180');
-                        }
-                    }
-                });
-
-                if (isOpen) {
-                    $answer.slideUp(300);
-                    $button.removeClass('text-primary');
-                    $button.attr('aria-expanded', 'false');
-                    if ($icon.length) {
-                        $icon.removeClass('transform rotate-180');
-                    }
-                } else {
-                    $answer.slideDown(300);
-                    $button.addClass('text-primary');
-                    $button.attr('aria-expanded', 'true');
-                    if ($icon.length) {
-                        $icon.addClass('transform rotate-180');
-                    }
+                $answer.slideToggle(300);
+                if ($icon.length) {
+                    $icon.toggleClass('transform rotate-180');
                 }
+                $button.toggleClass('text-primary');
+                $button.attr('aria-expanded', $answer.is(':visible'));
             });
             
             if (index === 0) {

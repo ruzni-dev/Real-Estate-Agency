@@ -264,18 +264,14 @@ $(function() {
             $button.on('click', function() {
                 const isOpen = $answer.is(':visible');
 
-                // Close every FAQ item except the one being clicked
+                // Close every other FAQ item
                 $faqCards.each(function() {
                     const $otherCard = $(this);
                     const $otherAnswer = $otherCard.find('.faq-answer').first();
                     const $otherButton = $otherCard.find('button').first();
                     const $otherIcon = $otherButton.find('svg').first();
 
-                    if ($otherCard.is($card) || !$otherAnswer.length || !$otherButton.length) {
-                        return;
-                    }
-
-                    if ($otherAnswer.is(':visible')) {
+                    if ($otherAnswer.length && $otherButton.length && $otherAnswer.is(':visible')) {
                         $otherAnswer.slideUp(300);
                         $otherButton.removeClass('text-primary');
                         $otherButton.attr('aria-expanded', 'false');
@@ -285,14 +281,7 @@ $(function() {
                     }
                 });
 
-                if (isOpen) {
-                    $answer.slideUp(300);
-                    $button.removeClass('text-primary');
-                    $button.attr('aria-expanded', 'false');
-                    if ($icon.length) {
-                        $icon.removeClass('transform rotate-180');
-                    }
-                } else {
+                if (!isOpen) {
                     $answer.slideDown(300);
                     $button.addClass('text-primary');
                     $button.attr('aria-expanded', 'true');
