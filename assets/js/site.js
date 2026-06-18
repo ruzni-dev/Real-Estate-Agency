@@ -129,11 +129,14 @@ $(function() {
     // ============================================
     function initActiveNav() {
         const currentPage = window.location.pathname.split('/').pop() || 'home.html';
-        $('nav a[href]').each(function() {
+        $('nav .nav-link[href]').each(function() {
             const href = $(this).attr('href').split('/').pop();
             if (href === currentPage) {
-                $(this).addClass('text-primary font-medium border-b-2 border-primary pb-1');
-                $(this).removeClass('text-text-secondary');
+                $(this).addClass('active');
+                $(this).attr('aria-current', 'page');
+            } else {
+                $(this).removeClass('active');
+                $(this).removeAttr('aria-current');
             }
         });
     }
