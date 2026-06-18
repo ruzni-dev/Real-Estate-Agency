@@ -573,12 +573,11 @@ $(function() {
         let images = [];
         
         // Open lightbox on image click
-        $('img').not('#lightbox img, .card img, .card-glass img').off('click.lightbox').on('click.lightbox', function(e) {
+        $('img').not('#lightbox img, .card img').on('click', function(e) {
             e.stopPropagation();
             const $img = $(this);
             if ($img.closest('button').length) return; // Don't open if inside button
             if ($img.closest('#lightbox').length) return; // Don't re-open from the lightbox itself
-            if ($img.closest('.card, .card-glass').length) return; // Don't open from card images
             
             images = [];
             currentImageIndex = 0;

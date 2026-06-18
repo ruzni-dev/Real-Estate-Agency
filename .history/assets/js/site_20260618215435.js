@@ -527,18 +527,11 @@ $(function() {
         });
 
         // Property card click
-        $('.card, .card-glass').has('img').css('cursor', 'pointer').off('click.propertyCard').on('click.propertyCard', function(e) {
-            if ($(e.target).closest('a, button, img').length) return;
-
+        $('.card').has('img').css('cursor', 'pointer').on('click', function() {
             const propertyTitle = $(this).find('h3').text().trim();
             if (propertyTitle) {
                 window.location.href = 'individual-property.html';
             }
-        });
-
-        // Prevent image clicks inside cards from bubbling to card click handlers
-        $('.card img, .card-glass img').off('click.noProp').on('click.noProp', function(e) {
-            e.stopPropagation();
         });
     }
 
@@ -573,12 +566,10 @@ $(function() {
         let images = [];
         
         // Open lightbox on image click
-        $('img').not('#lightbox img, .card img, .card-glass img').off('click.lightbox').on('click.lightbox', function(e) {
-            e.stopPropagation();
+        $('img').not('#lightbox img').on('click', function() {
             const $img = $(this);
             if ($img.closest('button').length) return; // Don't open if inside button
             if ($img.closest('#lightbox').length) return; // Don't re-open from the lightbox itself
-            if ($img.closest('.card, .card-glass').length) return; // Don't open from card images
             
             images = [];
             currentImageIndex = 0;
